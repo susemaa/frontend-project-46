@@ -17,9 +17,10 @@
   },
   "dependencies": {
     "commander": "^11.0.0",
+    "eslint-plugin-jest": "^27.2.2",
     "lodash": "^4.17.21"
   },
   "bin": {
     "gendiff": "bin/gendiff.js"
-  } 
+  }
 }

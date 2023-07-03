@@ -1,0 +1,12 @@
+name: my-check
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: install
+        run: make install
+      - name: tests
+        run: make test
+      - name: eslint
+        run: make lint
