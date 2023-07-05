@@ -13,3 +13,6 @@
 
 ## 3rd step
 [![asciicast](https://asciinema.org/a/594053.svg)](https://asciinema.org/a/594053)
+
+## 4th step
+[![asciicast](https://asciinema.org/a/594803.svg)](https://asciinema.org/a/594803)
