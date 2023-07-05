@@ -8,10 +8,17 @@ const __dirname = dirname(__filename);
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
 const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8');
 
-test('correct flow', () => {
+test('correct flow json', () => {
   const filepath1 = getFixturePath('file1.json');
   const filepath2 = getFixturePath('file2.json');
-  console.log(filepath1, filepath2);
+  const expectedString = readFile('expected.txt');
+
+  expect(gendiff(filepath1, filepath2)).toEqual(expectedString);
+});
+
+test('correct flow yaml', () => {
+  const filepath1 = getFixturePath('file1.yml');
+  const filepath2 = getFixturePath('file2.yaml');
   const expectedString = readFile('expected.txt');
 
   expect(gendiff(filepath1, filepath2)).toEqual(expectedString);
