@@ -60,6 +60,7 @@ const normalizePath = (filepath) => {
 
 const gendiff = (filepath1, filepath2) => {
   const normalizedPath1 = normalizePath(filepath1);
+
   const normalizedPath2 = normalizePath(filepath2);
 
   const obj1 = getObjByPath(normalizedPath1);
