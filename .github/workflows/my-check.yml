@@ -1,5 +1,5 @@
 # Name of workflow
-name: my-check
+name: NODECI
 
 on:
   - push
@@ -38,7 +38,7 @@ jobs:
         uses: paambaati/codeclimate-action@v4.0.0
          # Add Code Climate secret key
         env:
-           CC_TEST_REPORTER_ID: 303b36038508112e6c2aa8bd6e5de4e054ff86326f51158512f3eb607359dc55
+           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
            coverageCommand: make test-coverage
            debug: true
