@@ -2,6 +2,7 @@ import process from 'process';
 import _ from 'lodash';
 import fs from 'fs';
 import path from 'node:path';
+import getParseFunction from './parsers.js';
 
 const getSortedKeys = (obj1, obj2) => {
   const keys1 = _.keys(obj1);
@@ -17,7 +18,10 @@ const getObjByPath = (filepath) => {
   const obj = fs.readFileSync(filepath, (err) => {
     if (err) throw err;
   });
-  const jsonedObj = JSON.parse(obj);
+
+  const parseFunction = getParseFunction(filepath);
+
+  const jsonedObj = parseFunction(obj);
 
   return jsonedObj;
 };
