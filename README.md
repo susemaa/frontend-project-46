@@ -22,3 +22,6 @@
 
 ## 7th step
 [![asciicast](https://asciinema.org/a/595554.svg)](https://asciinema.org/a/595554)
+
+## 8th step
+[![asciicast](https://asciinema.org/a/595556.svg)](https://asciinema.org/a/595556)
