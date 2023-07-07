@@ -3,7 +3,7 @@
   "description": "[![Actions Status](https://github.com/susemaa/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/susemaa/frontend-project-46/actions)",
   "version": "1.0.0",
   "type": "module",
-  "main": "bin/gendiff.js",
+  "main": "src/utils.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
