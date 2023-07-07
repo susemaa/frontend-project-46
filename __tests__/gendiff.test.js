@@ -20,4 +20,7 @@ test('correct flow json', () => {
 
   const expectedPlain = readFile('expected_plain.txt');
   expect(gendiff(filepath1, filepath2, 'plain')).toEqual(expectedPlain);
+
+  const expectedJSON = readFile('expected_json.txt');
+  expect(gendiff(filepath1, filepath2, 'json')).toEqual(expectedJSON);
 });
