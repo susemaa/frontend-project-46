@@ -19,3 +19,6 @@
 
 ## 6th step
 [![asciicast](https://asciinema.org/a/595419.svg)](https://asciinema.org/a/595419)
+
+## 7th step
+[![asciicast](https://asciinema.org/a/595554.svg)](https://asciinema.org/a/595554)
