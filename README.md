@@ -10,7 +10,17 @@
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/a7c3257e1db4896b5704/test_coverage)](https://codeclimate.com/github/susemaa/frontend-project-46/test_coverage)
 
+## About
+gendiff is a CLI that shows difference between two files.
 
+## Setup
+`make install`
+
+## Usage
+To use the gendiff CLI you need to write such command:
+`gendiff [options] <filepath1> <filepath2>`
+Only one option is available: --format (or -f)
+It chooses the output format (stylish / plain / json, stylish is the default one)
 ## 3rd step
 [![asciicast](https://asciinema.org/a/594053.svg)](https://asciinema.org/a/594053)
 
