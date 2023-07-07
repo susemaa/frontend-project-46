@@ -26,7 +26,7 @@ const getObjByPath = (filepath) => {
   return jsonedObj;
 };
 
-const becomeStylish = (tree) => {
+const formatStylish = (tree) => {
   const space = ' ';
   const spacesAmount = 4;
   const makeDeep = (depth) => space.repeat(spacesAmount * depth - 2);
@@ -105,14 +105,14 @@ const normalizePath = (filepath) => {
   return path.resolve(process.cwd(), filepath);
 };
 
-const gendiff = (filepath1, filepath2) => {
+const gendiff = (filepath1, filepath2, format = formatStylish) => {
   const normalizedPath1 = normalizePath(filepath1);
   const normalizedPath2 = normalizePath(filepath2);
 
   const obj1 = getObjByPath(normalizedPath1);
   const obj2 = getObjByPath(normalizedPath2);
   const answTree = getAnswerTree(obj1, obj2);
-  const answer = becomeStylish(answTree);
+  const answer = format(answTree);
 
   return answer;
 };
