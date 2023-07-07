@@ -1,16 +1,16 @@
 import _ from 'lodash';
 
-const formatPlain = (tree) => {
-  const normalize = (value) => {
-    if (_.isObject(value)) {
-      return '[complex value]';
-    }
-    if (typeof value === 'string') {
-      return `'${value}'`;
-    }
-    return value;
-  };
+const normalize = (value) => {
+  if (_.isObject(value)) {
+    return '[complex value]';
+  }
+  if (typeof value === 'string') {
+    return `'${value}'`;
+  }
+  return value;
+};
 
+const formatPlain = (tree) => {
   const iter = (node, path) => {
     const arrOfStr = node.flatMap((item) => {
       switch (item.type) {
