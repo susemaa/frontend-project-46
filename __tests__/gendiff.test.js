@@ -17,4 +17,7 @@ test('correct flow json', () => {
   const YMLfilepath1 = getFixturePath('deep1.yml');
   const YMLfilepath2 = getFixturePath('deep2.yaml');
   expect(gendiff(YMLfilepath1, YMLfilepath2)).toEqual(expectedString);
+
+  const expectedPlain = readFile('expected_plain.txt');
+  expect(gendiff(filepath1, filepath2, 'plain')).toEqual(expectedPlain);
 });
