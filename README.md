@@ -18,7 +18,9 @@ gendiff is a CLI that shows difference between two files.
 
 ## Usage
 To use the gendiff CLI you need to write such command:
+
 `gendiff [options] <filepath1> <filepath2>`
+
 Only one option is available: --format (or -f)
 It chooses the output format (stylish / plain / json, stylish is the default one)
 ## 3rd step
