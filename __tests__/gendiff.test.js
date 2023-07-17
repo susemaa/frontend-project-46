@@ -8,19 +8,20 @@ const __dirname = dirname(__filename);
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
 const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8');
 
-test('correct flow json', () => {
+const expectedStylish = readFile('expected_deep.txt');
+const expectedPlain = readFile('expected_plain.txt');
+const expectedJSON = readFile('expected_json.txt');
+
+test('json every format', () => {
   const filepath1 = getFixturePath('deep1.json');
   const filepath2 = getFixturePath('deep2.json');
-  const expectedString = readFile('expected_deep.txt');
-  expect(gendiff(filepath1, filepath2)).toEqual(expectedString);
-
-  const YMLfilepath1 = getFixturePath('deep1.yml');
-  const YMLfilepath2 = getFixturePath('deep2.yaml');
-  expect(gendiff(YMLfilepath1, YMLfilepath2)).toEqual(expectedString);
-
-  const expectedPlain = readFile('expected_plain.txt');
+  expect(gendiff(filepath1, filepath2)).toEqual(expectedStylish);
   expect(gendiff(filepath1, filepath2, 'plain')).toEqual(expectedPlain);
-
-  const expectedJSON = readFile('expected_json.txt');
   expect(gendiff(filepath1, filepath2, 'json')).toEqual(expectedJSON);
+});
+
+test('yaml stylish', () => {
+  const filepath1 = getFixturePath('deep1.yml');
+  const filepath2 = getFixturePath('deep2.yaml');
+  expect(gendiff(filepath1, filepath2)).toEqual(expectedStylish);
 });
