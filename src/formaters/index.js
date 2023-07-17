@@ -1,6 +1,7 @@
 import formatPlain from './plain.js';
 import formatStylish from './stylish.js';
-import formatJSON from './json.js';
+
+const formatJSON = (tree) => JSON.stringify(tree, null, '  ');
 
 const formats = {
   stylish: formatStylish,
