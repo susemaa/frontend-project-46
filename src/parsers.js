@@ -1,18 +1,15 @@
 import yaml from 'js-yaml';
-import path from 'node:path';
 
-const getParseFunction = (filepath) => {
-  const format = path.extname(filepath);
-
+const getJsonedObj = (format, obj) => {
   if (format === '.yaml' || format === '.yml') {
-    return yaml.load;
+    return yaml.load(obj);
   }
 
   if (format === '.json') {
-    return JSON.parse;
+    return JSON.parse(obj);
   }
 
   return null;
 };
 
-export default getParseFunction;
+export default getJsonedObj;

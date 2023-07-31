@@ -9,6 +9,6 @@ const formats = {
   json: formatJSON,
 };
 
-const getFormatFunction = (format) => formats[format];
+const formatTree = (format, tree) => formats[format](tree);
 
-export default getFormatFunction;
+export default formatTree;
