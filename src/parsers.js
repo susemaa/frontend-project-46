@@ -1,15 +1,15 @@
 import yaml from 'js-yaml';
 
-const getJsonedObj = (format, obj) => {
+const getObjFromData = (format, data) => {
   if (format === '.yaml' || format === '.yml') {
-    return yaml.load(obj);
+    return yaml.load(data);
   }
 
   if (format === '.json') {
-    return JSON.parse(obj);
+    return JSON.parse(data);
   }
 
   return null;
 };
 
-export default getJsonedObj;
+export default getObjFromData;
